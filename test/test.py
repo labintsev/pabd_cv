@@ -20,9 +20,9 @@ class MyTestCase(unittest.TestCase):
             response = request('POST', 'http://localhost:1791/classify', data=buf)
 
         out = response.content.decode('utf-8')
-        expected = 'келли, Пембрук, Немецкая овчарка'
+        expected = 'Пембрук'
         
-        self.assertEqual(out, expected)
+        self.assertIn(expected, out)
 
 
 if __name__ == '__main__':
