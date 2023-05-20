@@ -45,7 +45,6 @@ def classify_binary():
     idx = dog_probability > 0.5
     return ('Cat', 'Dog')[idx]
 
-
 if __name__ == '__main__':
     app.run(port=9207)
     input()
