@@ -5,7 +5,7 @@ import click
 @click.command()
 @click.option('-i', '--data_dir', default="data\\processed\\PetImages")
 @click.option('-o', '--model_dir', default="models\\my_model")
-@click.option('-e', '--epochs', default=4)
+@click.option('-e', '--epochs', default=2)
 @click.option('-l', '--lr', default=1e-3)
 @click.option('-b', '--batch_size', default=2)
 @click.option('-s', '--image_size', default=180)
