@@ -33,7 +33,7 @@ class MyTestCase(unittest.TestCase):
 
         with buffer as buf:
             buffer.seek(0)
-            response = request('POST', 'http://localhost:1234/classify/binary', data=buf)
+            response = request('POST', 'http://localhost:9207/classify/binary', data=buf)
 
         out = response.content.decode('utf-8')
         print(out)
