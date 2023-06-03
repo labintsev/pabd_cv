@@ -1,15 +1,15 @@
 import tensorflow as tf
 
 data_dir = 'data/raw/pinterest'
-report_path = 'output/report.txt'
+
+report_path = 'output/report-5.txt'
 model_path = 'models/my_model'
+
 
 def evaluate():
     test_df = tf.keras.utils.image_dataset_from_directory(
         data_dir,
-        image_size = (180, 180)
-    )
-
+        image_size=(180, 180))
     model = tf.keras.models.load_model(model_path)
 
     metrics = [
@@ -17,6 +17,7 @@ def evaluate():
         tf.metrics.Precision(),
         tf.metrics.Recall()
     ]
+
 
     model.compile(metrics=metrics)
 
@@ -30,3 +31,4 @@ def evaluate():
 
 if __name__ == '__main__':
     evaluate()
+
